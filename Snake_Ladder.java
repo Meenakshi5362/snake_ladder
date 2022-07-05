@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Snake_Ladder {
 	public static void main(String[] args) {
-		int player_1 = 0, dice;
+		int player_1 = 0, dice,count1=0;
 		String choice;
 		Random r = new Random();
 		while (true) {
@@ -16,7 +16,7 @@ public class Snake_Ladder {
 				if (player_1 + dice <= 100) {
 					player_1 = player_1 + dice;
 
-					System.out.println(player_1);}
+					}
 					else {
 						System.out.println("position exceeds 100");
 					}
@@ -26,7 +26,7 @@ public class Snake_Ladder {
 				if (player_1 < 0) {
 					player_1 = 0;
 				}
-				System.out.println(player_1);
+				//System.out.println(player_1);
 			} else {
 				System.out.println("No_Play condition occures");
 			}
@@ -34,6 +34,8 @@ public class Snake_Ladder {
 				System.out.println("game ended");
 				break;
 			}
+			count1++;System.out.println("Position of player after every dice role "+player_1);
 		}
+		System.out.println("No of times dice was played :"+count1);
 	}
 }
