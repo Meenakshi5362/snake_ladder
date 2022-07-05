@@ -13,23 +13,26 @@ public class Snake_Ladder {
 			System.out.println(choice);
 
 			if (choice == ("Ladder")) {
-				player_1 = player_1 + dice;
-				System.out.println(player_1);
-			} 
-			else if (choice == ("Snake")) {
+				if (player_1 + dice <= 100) {
+					player_1 = player_1 + dice;
+
+					System.out.println(player_1);}
+					else {
+						System.out.println("position exceeds 100");
+					}
+				
+			} else if (choice == ("Snake")) {
 				player_1 = player_1 - dice;
-						if (player_1 < 0) {
+				if (player_1 < 0) {
 					player_1 = 0;
 				}
 				System.out.println(player_1);
-			} 
-			else {
+			} else {
 				System.out.println("No_Play condition occures");
 			}
-			if (player_1 >= 100)
-			{
+			if (player_1 >= 100) {
 				System.out.println("game ended");
-			break;	
+				break;
 			}
 		}
 	}
